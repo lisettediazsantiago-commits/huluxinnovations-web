@@ -41,13 +41,6 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Logo mark image styling - background blends with section */
-  .logo-mark {
-    display: block;
-    mix-blend-mode: screen;
-    filter: brightness(1.05);
-  }
-
   /* ===== NAV ===== */
   nav {
     position: fixed;
@@ -139,7 +132,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 120px 48px 80px;
+    padding: 120px 48px 120px;
     overflow: hidden;
   }
 
@@ -211,11 +204,13 @@
 
   .hero-cta-row {
     display: flex;
-    gap: 16px;
+    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
     opacity: 0;
     animation: fadeUp 2s 1s forwards;
+    position: relative;
+    z-index: 3;
   }
 
   .btn {
@@ -258,7 +253,7 @@
   /* ===== SCROLL CUE ===== */
   .scroll-cue {
     position: absolute;
-    bottom: 40px;
+    bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
     font-family: var(--display);
@@ -267,6 +262,7 @@
     color: var(--cream-muted);
     opacity: 0;
     animation: fadeUp 2s 1.4s forwards;
+    z-index: 1;
   }
 
   .scroll-cue::after {
@@ -705,8 +701,9 @@
     .nav-tagline { display: none; }
     .nav-mark { width: 40px; height: 40px; }
     section { padding: 80px 24px; }
-    .hero { padding: 100px 24px 60px; }
+    .hero { padding: 100px 24px 100px; }
     .hero-mark { width: 140px; height: 140px; }
+    .scroll-cue { display: none; }
     .memorigems-grid { grid-template-columns: 1fr; gap: 48px; }
     .signup { padding: 100px 24px; }
     footer { padding: 40px 24px 24px; }
@@ -898,7 +895,7 @@
   function handleSubmit(e) {
     e.preventDefault();
     const email = document.getElementById('emailInput').value;
-    // In production, replace this with an actual endpoint
+    // In production, replace this with an actual endpoint (Formspree, Mailchimp, etc.)
     console.log('Email submitted:', email);
     document.getElementById('emailForm').style.display = 'none';
     document.getElementById('successMsg').style.display = 'block';
