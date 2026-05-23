@@ -501,22 +501,100 @@
     margin: 32px 0;
   }
 
-  .memorigems-visual {
-    aspect-ratio: 1/1;
-    background: var(--navy);
-    border: 0.5px solid rgba(201, 169, 97, 0.2);
-    border-radius: 4px;
+  /* ===== MEMORIGEMS PRODUCT SCREENS ===== */
+  .memorigems-screens {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .memorigems-screen {
+    background: var(--cream);
+    border-radius: 14px;
+    padding: 8px;
+    border: 0.5px solid rgba(201, 169, 97, 0.25);
+    transition: transform 0.4s ease;
+  }
+
+  .memorigems-screen:hover {
+    transform: translateY(-4px);
+  }
+
+  .memorigems-screen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  .memorigems-screen-label {
+    font-family: var(--display);
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-align: center;
+    margin-top: 14px;
+    padding-bottom: 6px;
+  }
+
+  /* ===== HOW IT WORKS ===== */
+  .how-it-works {
+    background: var(--navy-deep);
+    position: relative;
+  }
+
+  .how-it-works-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 64px;
+  }
+
+  .how-it-works-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .how-step {
+    text-align: center;
+  }
+
+  .how-step-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 0.5px solid var(--gold);
+    margin: 0 auto 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    overflow: hidden;
+    color: var(--gold);
   }
 
-  .memorigems-visual img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .how-step-num {
+    font-family: var(--display);
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .how-step-title {
+    font-family: var(--serif);
+    font-size: 24px;
+    color: var(--cream);
+    margin-bottom: 12px;
+    font-weight: 300;
+  }
+
+  .how-step-desc {
+    font-family: var(--serif);
+    font-size: 16px;
+    color: var(--cream-muted);
+    line-height: 1.7;
   }
 
   /* ===== FOUNDER / LEADERSHIP ===== */
@@ -813,6 +891,8 @@
     .hero-mark { width: 140px; height: 140px; }
     .scroll-cue { display: none; }
     .memorigems-grid { grid-template-columns: 1fr; gap: 48px; }
+    .memorigems-screens { gap: 14px; }
+    .how-it-works-grid { grid-template-columns: 1fr; gap: 40px; }
     .founder-leadership-grid {
       grid-template-columns: 1fr;
       gap: 48px;
@@ -945,8 +1025,62 @@
         <a href="https://www.mymemorigems.com/" target="_blank" rel="noopener" class="btn btn-primary">Visit MemoriGems</a>
       </div>
     </div>
-    <div class="memorigems-visual reveal">
-      <img src="/assets/hulux-mark.jpg" alt="HuLux Innovations logo">
+    <div class="reveal">
+      <div class="memorigems-screens">
+        <div class="memorigems-screen">
+          <img src="/lavenderRoutine.jpg" alt="MemoriGems Routine prompts screen — gentle reminders for daily moments">
+          <div class="memorigems-screen-label">ROUTINE</div>
+        </div>
+        <div class="memorigems-screen">
+          <img src="/mintComfort.jpg" alt="MemoriGems Comfort prompts screen — phrases to help a loved one feel safe and settled">
+          <div class="memorigems-screen-label">COMFORT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="how-it-works-header reveal">
+    <div class="section-eyebrow">HOW MEMORIGEMS WORKS</div>
+    <h2 class="section-title">Three steps to keep <em>a voice close</em>.</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="how-it-works-grid">
+    <div class="how-step reveal">
+      <div class="how-step-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="2" width="6" height="13" rx="3"/>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+          <line x1="12" y1="19" x2="12" y2="22"/>
+        </svg>
+      </div>
+      <div class="how-step-num">01</div>
+      <div class="how-step-title">Record</div>
+      <div class="how-step-desc">Family members record gentle phrases in their own voice — guided by suggested prompts for routine moments or comfort.</div>
+    </div>
+    <div class="how-step reveal">
+      <div class="how-step-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 3h12l4 6-10 13L2 9z"/>
+          <path d="M12 22 8 9l4-6 4 6z"/>
+          <path d="M2 9h20"/>
+        </svg>
+      </div>
+      <div class="how-step-num">02</div>
+      <div class="how-step-title">Save as a Gem</div>
+      <div class="how-step-desc">Each recording becomes a Gem, organized by category and tagged to the moments and needs it belongs to.</div>
+    </div>
+    <div class="how-step reveal">
+      <div class="how-step-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </div>
+      <div class="how-step-num">03</div>
+      <div class="how-step-title">Reconnect</div>
+      <div class="how-step-desc">They hear the voice they know — in the moments they need it most. Because emotional recognition can outlast memory.</div>
     </div>
   </div>
 </section>
@@ -1021,7 +1155,6 @@
 </footer>
 
 <script>
-  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -1032,11 +1165,9 @@
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Form handler
   function handleSubmit(e) {
     e.preventDefault();
     const email = document.getElementById('emailInput').value;
-    // In production, replace this with an actual endpoint (Formspree, Mailchimp, etc.)
     console.log('Email submitted:', email);
     document.getElementById('emailForm').style.display = 'none';
     document.getElementById('successMsg').style.display = 'block';
