@@ -509,6 +509,104 @@
     object-fit: cover;
   }
 
+  /* ===== FOUNDER / LEADERSHIP ===== */
+  .founder-leadership {
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .founder-leadership-glow {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 800px;
+    height: 800px;
+    transform: translateY(-50%);
+    background: radial-gradient(circle, rgba(201, 169, 97, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .founder-leadership-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+  }
+
+  .founder-leadership-portrait {
+    aspect-ratio: 4/5;
+    background: var(--navy);
+    border: 0.5px solid rgba(201, 169, 97, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .founder-leadership-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .founder-leadership-tag {
+    font-family: var(--display);
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .founder-leadership h2 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(34px, 4.5vw, 52px);
+    line-height: 1.15;
+    letter-spacing: -0.3px;
+    margin-bottom: 32px;
+  }
+
+  .founder-leadership h2 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .founder-leadership p {
+    font-size: 18px;
+    color: var(--cream-muted);
+    margin-bottom: 22px;
+    line-height: 1.8;
+  }
+
+  .founder-leadership p strong {
+    color: var(--cream);
+    font-weight: 400;
+  }
+
+  .founder-leadership-sig {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 0.5px solid rgba(201, 169, 97, 0.2);
+  }
+
+  .founder-leadership-sig-name {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--cream);
+    margin-bottom: 4px;
+  }
+
+  .founder-leadership-sig-title {
+    font-family: var(--display);
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+  }
+
   /* ===== PARTNERS ===== */
   .partners {
     background: var(--navy-deep);
@@ -705,6 +803,14 @@
     .hero-mark { width: 140px; height: 140px; }
     .scroll-cue { display: none; }
     .memorigems-grid { grid-template-columns: 1fr; gap: 48px; }
+    .founder-leadership-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .founder-leadership-portrait {
+      max-width: 320px;
+      margin: 0 auto;
+    }
     .signup { padding: 100px 24px; }
     footer { padding: 40px 24px 24px; }
     .footer-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
@@ -730,6 +836,7 @@
     <a href="#mission">Mission</a>
     <a href="#beliefs">Beliefs</a>
     <a href="#memorigems">MemoriGems</a>
+    <a href="#leadership">Leadership</a>
     <a href="#partners">Partners</a>
     <a href="#signup" class="nav-cta">Stay Close</a>
   </div>
@@ -834,6 +941,29 @@
   </div>
 </section>
 
+<!-- FOUNDER / LEADERSHIP -->
+<section class="founder-leadership" id="leadership">
+  <div class="founder-leadership-glow"></div>
+  <div class="founder-leadership-grid">
+    <div class="founder-leadership-portrait reveal">
+      <img src="/lisette-headshot.jpg" alt="Lisette Diaz Santiago, Founder &amp; CEO of HuLux Innovations">
+    </div>
+    <div class="reveal">
+      <div class="founder-leadership-tag">LEADERSHIP</div>
+      <h2>Built by someone who has <em>been in the room</em>.</h2>
+      <p>HuLux Innovations was founded by <strong>Lisette Diaz Santiago</strong>, a healthcare leader, educator, and program builder with over a decade of experience inside one of the country's largest safety-net health systems.</p>
+      <p>At Boston Medical Center, Lisette's career moved through the work itself — from coordinating a high-acuity Surgical ICU, to managing project operations in Trauma &amp; Acute Care Surgery, to leading patient experience initiatives that improved HCAHPS scores and built unit-level champion programs, to ultimately designing and running system-wide training as Learning &amp; Development Manager. As part of a team rebuilding new-hire onboarding, she created the orientation curriculum used across sessions and personally facilitated more than a dozen cohorts — work that helped achieve a <strong>98% satisfaction rate</strong> and strengthened early engagement across a diverse frontline workforce.</p>
+      <p>In 2025, she lost her grandfather to progressive dementia. What she learned in those final months — about the moments families search for, the technology they couldn't find, and the parts of a person that remain even when memory recedes — became the foundation for HuLux Innovations, formally established in November 2025, and its flagship product, MemoriGems.</p>
+      <p>In summer 2026, Lisette will present at the <strong>Alzheimer's Association International Conference (AAIC)</strong> on voice-based approaches to supporting emotional connection in dementia care — work drawn directly from MemoriGems' early thinking.</p>
+      <p>HuLux Innovations exists because she could not find what her family needed — and because she believes other families deserve better than to search alone.</p>
+      <div class="founder-leadership-sig">
+        <div class="founder-leadership-sig-name">Lisette Diaz Santiago</div>
+        <div class="founder-leadership-sig-title">FOUNDER &amp; CEO</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PARTNERS / INVESTORS -->
 <section class="partners" id="partners">
   <div class="partners-inner reveal">
@@ -872,6 +1002,7 @@
       <a href="#mission">Mission</a>
       <a href="#beliefs">Beliefs</a>
       <a href="#memorigems">MemoriGems</a>
+      <a href="#leadership">Leadership</a>
       <a href="https://www.linkedin.com/company/huluxinnovations" target="_blank" rel="noopener">LinkedIn</a>
       <a href="mailto:hello@huluxinnovations.com">Contact</a>
     </div>
