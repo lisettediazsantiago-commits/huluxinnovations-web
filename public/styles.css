@@ -320,3 +320,46 @@ a{color:inherit;text-decoration:none}
   .pillars3{font-size:10px}
 }
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* ---------- on-brand gem card (replaces clashing product screenshot) ---------- */
+.gem-card{
+  border:1px solid var(--line);border-radius:8px;
+  background:linear-gradient(160deg,var(--navy-soft),var(--navy-deep));
+  padding:34px 32px 30px;
+  box-shadow:0 0 60px rgba(201,169,97,.07);
+}
+.gem-top{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.gem-icon{
+  width:44px;height:44px;border-radius:50%;flex:0 0 auto;
+  border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;position:relative;
+}
+.gem-icon::before{content:"";width:11px;height:11px;background:var(--gold);transform:rotate(45deg)}
+.gem-title{font-family:var(--display);font-size:18px;letter-spacing:.06em;color:var(--cream)}
+.gem-sub{font-size:13px;color:var(--cream-faint);margin-top:2px}
+.gem-label{
+  text-align:center;font-family:var(--display);font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:18px;
+}
+.gem-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.phrase{
+  position:relative;border:1px solid var(--line);border-radius:7px;
+  background:rgba(10,26,53,.6);
+  padding:24px 16px;min-height:78px;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font-family:var(--serif);font-size:18px;color:var(--cream);
+  transition:border-color .25s ease,transform .25s ease,background .25s ease;
+}
+.phrase:hover{border-color:var(--gold);transform:translateY(-2px);background:rgba(20,40,73,.7)}
+.phrase .rec{position:absolute;top:12px;left:12px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.gem-foot{
+  border-top:1px solid var(--line-soft);padding-top:18px;
+  font-family:var(--serif);font-style:italic;font-size:15px;color:var(--cream-muted);text-align:center;
+}
+@media (prefers-reduced-motion:no-preference){
+  .phrase .rec{animation:recpulse 2.6s ease-in-out infinite}
+  .phrase:nth-child(2) .rec{animation-delay:.4s}
+  .phrase:nth-child(3) .rec{animation-delay:.8s}
+  .phrase:nth-child(4) .rec{animation-delay:1.2s}
+  @keyframes recpulse{0%,100%{opacity:.35;box-shadow:0 0 0 0 rgba(201,169,97,.4)}50%{opacity:1;box-shadow:0 0 0 4px rgba(201,169,97,0)}}
+}
+@media(max-width:560px){.gem-grid{grid-template-columns:1fr 1fr}.phrase{font-size:16px;min-height:66px}}
