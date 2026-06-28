@@ -3,1205 +3,247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HuLux Innovations — Closer, when it matters most</title>
-<meta name="description" content="HuLux Innovations builds human-centered technology that preserves connection, dignity, and emotional wellbeing across generations.">
-<link rel="icon" type="image/jpeg" href="/assets/hulux-mark.jpg">
+<title>HuLux Innovations — Human-Centered Communication</title>
+<meta name="description" content="HuLux Innovations advances human-centered communication through research, technology, and education. VOCES® is the framework; MemoriGems® is the first flagship innovation built from it.">
+<link rel="canonical" href="https://huluxinnovations.com/">
+<link rel="icon" type="image/jpeg" href="assets/hulux-mark.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HuLux Innovations">
+<meta property="og:title" content="HuLux Innovations — Human-Centered Communication">
+<meta property="og:description" content="An organization advancing human-centered communication. VOCES® is the framework; MemoriGems® is the first flagship built from it.">
+<meta property="og:url" content="https://huluxinnovations.com/">
+<meta property="og:image" content="https://huluxinnovations.com/assets/hulux-mark.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --navy: #0A1A35;
-    --navy-deep: #060F23;
-    --navy-soft: #142849;
-    --gold: #C9A961;
-    --gold-warm: #D4B876;
-    --gold-deep: #8C7339;
-    --cream: #F5F1E8;
-    --cream-soft: #EFEAD9;
-    --cream-muted: rgba(245, 241, 232, 0.7);
-    --cream-faint: rgba(245, 241, 232, 0.4);
-    --serif: 'Cormorant Garamond', 'Times New Roman', serif;
-    --display: 'Cinzel', 'Trajan Pro', serif;
-    --sans: 'Inter', system-ui, sans-serif;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--navy);
-    color: var(--cream);
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.7;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* ===== NAV ===== */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    padding: 20px 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(10, 26, 53, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 0.5px solid rgba(201, 169, 97, 0.15);
-  }
-
-  .nav-brand {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .nav-mark {
-    width: 48px;
-    height: 48px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
-
-  .nav-divider {
-    width: 0.5px;
-    height: 32px;
-    background: var(--cream-faint);
-  }
-
-  .nav-text {
-    font-family: var(--display);
-    font-size: 13px;
-    letter-spacing: 2px;
-    color: var(--cream);
-  }
-
-  .nav-text .lux { color: var(--gold); }
-
-  .nav-tagline {
-    font-family: var(--serif);
-    font-size: 10px;
-    font-style: italic;
-    color: var(--cream-muted);
-    letter-spacing: 0.5px;
-    margin-top: 2px;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    font-family: var(--sans);
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  .nav-links a {
-    color: var(--cream-muted);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .nav-links a:hover { color: var(--gold); }
-
-  .nav-cta {
-    padding: 10px 22px;
-    border: 0.5px solid var(--gold);
-    color: var(--gold) !important;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-
-  .nav-cta:hover {
-    background: var(--gold);
-    color: var(--navy) !important;
-  }
-
-  /* ===== HERO ===== */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 120px 48px 120px;
-    overflow: hidden;
-  }
-
-  .hero-glow {
-    position: absolute;
-    width: 1200px;
-    height: 1200px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(201, 169, 97, 0.1) 0%, rgba(201, 169, 97, 0.03) 30%, transparent 65%);
-    pointer-events: none;
-  }
-
-  .hero-content {
-    position: relative;
-    text-align: center;
-    max-width: 900px;
-    z-index: 2;
-  }
-
-  .hero-eyebrow {
-    font-family: var(--display);
-    font-size: 11px;
-    letter-spacing: 6px;
-    color: var(--gold);
-    margin-bottom: 32px;
-    opacity: 0;
-    animation: fadeUp 1.2s 0.2s forwards;
-  }
-
-  .hero-mark {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto 32px;
-    opacity: 0;
-    animation: fadeUp 1.4s 0.4s forwards;
-    border-radius: 8px;
-  }
-
-  .hero h1 {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(40px, 6vw, 72px);
-    line-height: 1.15;
-    letter-spacing: -0.5px;
-    margin-bottom: 32px;
-    opacity: 0;
-    animation: fadeUp 1.6s 0.6s forwards;
-  }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--gold);
-    font-weight: 400;
-  }
-
-  .hero-sub {
-    font-family: var(--serif);
-    font-size: clamp(17px, 1.6vw, 21px);
-    font-weight: 300;
-    color: var(--cream-muted);
-    max-width: 620px;
-    margin: 0 auto 48px;
-    line-height: 1.6;
-    opacity: 0;
-    animation: fadeUp 1.8s 0.8s forwards;
-  }
-
-  .hero-cta-row {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeUp 2s 1s forwards;
-    position: relative;
-    z-index: 3;
-  }
-
-  .btn {
-    font-family: var(--sans);
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 16px 32px;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    border: 0.5px solid transparent;
-  }
-
-  .btn-primary {
-    background: var(--gold);
-    color: var(--navy);
-    border-color: var(--gold);
-  }
-
-  .btn-primary:hover {
-    background: var(--gold-warm);
-    border-color: var(--gold-warm);
-  }
-
-  .btn-ghost {
-    background: transparent;
-    color: var(--cream);
-    border-color: var(--cream-faint);
-  }
-
-  .btn-ghost:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-  }
-
-  /* ===== SCROLL CUE ===== */
-  .scroll-cue {
-    position: absolute;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: var(--display);
-    font-size: 9px;
-    letter-spacing: 4px;
-    color: var(--cream-muted);
-    opacity: 0;
-    animation: fadeUp 2s 1.4s forwards;
-    z-index: 1;
-  }
-
-  .scroll-cue::after {
-    content: '';
-    display: block;
-    width: 0.5px;
-    height: 40px;
-    background: var(--gold);
-    margin: 12px auto 0;
-    animation: scrollLine 2s ease-in-out infinite;
-  }
-
-  @keyframes scrollLine {
-    0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
-    50% { opacity: 1; transform: scaleY(1); }
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ===== SECTIONS ===== */
-  section { padding: 140px 48px; position: relative; }
-
-  .section-eyebrow {
-    font-family: var(--display);
-    font-size: 11px;
-    letter-spacing: 6px;
-    color: var(--gold);
-    margin-bottom: 24px;
-  }
-
-  .section-title {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(32px, 4.5vw, 52px);
-    line-height: 1.2;
-    letter-spacing: -0.3px;
-    margin-bottom: 32px;
-  }
-
-  .section-title em {
-    font-style: italic;
-    color: var(--gold);
-  }
-
-  .section-divider {
-    width: 60px;
-    height: 0.5px;
-    background: var(--gold);
-    margin: 0 auto 40px;
-  }
-
-  /* ===== MISSION ===== */
-  .mission {
-    background: var(--navy-deep);
-    text-align: center;
-  }
-
-  .mission-inner { max-width: 820px; margin: 0 auto; }
-
-  .mission-quote {
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 300;
-    font-size: clamp(24px, 3vw, 36px);
-    line-height: 1.5;
-    color: var(--cream);
-    margin-bottom: 32px;
-  }
-
-  .mission-body {
-    font-size: 19px;
-    color: var(--cream-muted);
-    max-width: 680px;
-    margin: 0 auto;
-    line-height: 1.8;
-  }
-
-  /* ===== BELIEFS ===== */
-  .beliefs { background: var(--navy); }
-
-  .beliefs-header {
-    text-align: center;
-    max-width: 720px;
-    margin: 0 auto 80px;
-  }
-
-  .beliefs-grid {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1px;
-    background: rgba(201, 169, 97, 0.15);
-    border: 0.5px solid rgba(201, 169, 97, 0.15);
-  }
-
-  .belief {
-    background: var(--navy);
-    padding: 48px 36px;
-    transition: background 0.4s ease;
-    position: relative;
-  }
-
-  .belief:hover { background: var(--navy-soft); }
-
-  .belief-num {
-    font-family: var(--display);
-    font-size: 11px;
-    letter-spacing: 3px;
-    color: var(--gold);
-    margin-bottom: 20px;
-  }
-
-  .belief-text {
-    font-family: var(--serif);
-    font-size: 22px;
-    line-height: 1.4;
-    color: var(--cream);
-    font-weight: 300;
-  }
-
-  .belief-sub {
-    font-size: 15px;
-    font-style: italic;
-    color: var(--cream-muted);
-    margin-top: 12px;
-    line-height: 1.5;
-  }
-
-  /* ===== FOCUS AREAS ===== */
-  .focus {
-    background: var(--navy-deep);
-    text-align: center;
-  }
-
-  .focus-header { max-width: 720px; margin: 0 auto 64px; }
-
-  .focus-list {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .focus-tag {
-    font-family: var(--serif);
-    font-size: 18px;
-    padding: 14px 28px;
-    border: 0.5px solid var(--cream-faint);
-    border-radius: 100px;
-    color: var(--cream);
-    transition: all 0.3s ease;
-    cursor: default;
-  }
-
-  .focus-tag:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-  }
-
-  /* ===== MEMORIGEMS ===== */
-  .memorigems {
-    background: var(--navy);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .memorigems-glow {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 800px;
-    height: 800px;
-    transform: translateY(-50%);
-    background: radial-gradient(circle, rgba(201, 169, 97, 0.06) 0%, transparent 60%);
-    pointer-events: none;
-  }
-
-  .memorigems-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-    position: relative;
-  }
-
-  .memorigems-tag {
-    font-family: var(--display);
-    font-size: 11px;
-    letter-spacing: 5px;
-    color: var(--gold);
-    margin-bottom: 24px;
-  }
-
-  .memorigems h2 {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(36px, 4.5vw, 56px);
-    line-height: 1.15;
-    margin-bottom: 28px;
-  }
-
-  .memorigems h2 em { font-style: italic; color: var(--gold); }
-
-  .memorigems h2 a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .memorigems h2 a:hover {
-    color: var(--gold);
-  }
-
-  .memorigems p {
-    font-size: 18px;
-    color: var(--cream-muted);
-    margin-bottom: 24px;
-    line-height: 1.8;
-  }
-
-  .memorigems-quote {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 21px;
-    color: var(--cream);
-    border-left: 0.5px solid var(--gold);
-    padding-left: 20px;
-    margin: 32px 0;
-  }
-
-  /* ===== MEMORIGEMS PRODUCT SCREENS ===== */
-  .memorigems-screens {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: start;
-  }
-
-  .memorigems-screen {
-    background: var(--cream);
-    border-radius: 14px;
-    padding: 8px;
-    border: 0.5px solid rgba(201, 169, 97, 0.25);
-    transition: transform 0.4s ease;
-  }
-
-  .memorigems-screen:hover {
-    transform: translateY(-4px);
-  }
-
-  .memorigems-screen img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-  }
-
-  .memorigems-screen-label {
-    font-family: var(--display);
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: var(--gold);
-    text-align: center;
-    margin-top: 14px;
-    padding-bottom: 6px;
-  }
-
-  .memorigems-screen-caption {
-    font-family: var(--serif);
-    font-size: 15px;
-    line-height: 1.55;
-    color: var(--cream-muted);
-    text-align: center;
-    margin-top: 10px;
-    padding: 0 8px 8px;
-  }
-
-  /* ===== HOW IT WORKS ===== */
-  .how-it-works {
-    background: var(--navy-deep);
-    position: relative;
-  }
-
-  .how-it-works-header {
-    text-align: center;
-    max-width: 720px;
-    margin: 0 auto 64px;
-  }
-
-  .how-it-works-grid {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-  }
-
-  .how-step {
-    text-align: center;
-  }
-
-  .how-step-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    border: 0.5px solid var(--gold);
-    margin: 0 auto 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gold);
-  }
-
-  .how-step-num {
-    font-family: var(--display);
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: var(--gold);
-    margin-bottom: 8px;
-  }
-
-  .how-step-title {
-    font-family: var(--serif);
-    font-size: 24px;
-    color: var(--cream);
-    margin-bottom: 12px;
-    font-weight: 300;
-  }
-
-  .how-step-desc {
-    font-family: var(--serif);
-    font-size: 16px;
-    color: var(--cream-muted);
-    line-height: 1.7;
-  }
-
-  /* ===== FOUNDER / LEADERSHIP ===== */
-  .founder-leadership {
-    background: var(--navy);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .founder-leadership-glow {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 800px;
-    height: 800px;
-    transform: translateY(-50%);
-    background: radial-gradient(circle, rgba(201, 169, 97, 0.06) 0%, transparent 60%);
-    pointer-events: none;
-  }
-
-  .founder-leadership-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 80px;
-    align-items: center;
-    position: relative;
-  }
-
-  .founder-leadership-portrait {
-    aspect-ratio: 4/5;
-    background: var(--navy);
-    border: 0.5px solid rgba(201, 169, 97, 0.2);
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .founder-leadership-portrait img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .founder-leadership-tag {
-    font-family: var(--display);
-    font-size: 11px;
-    letter-spacing: 5px;
-    color: var(--gold);
-    margin-bottom: 24px;
-  }
-
-  .founder-leadership h2 {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(34px, 4.5vw, 52px);
-    line-height: 1.15;
-    letter-spacing: -0.3px;
-    margin-bottom: 32px;
-  }
-
-  .founder-leadership h2 em {
-    font-style: italic;
-    color: var(--gold);
-  }
-
-  .founder-leadership p {
-    font-size: 18px;
-    color: var(--cream-muted);
-    margin-bottom: 22px;
-    line-height: 1.8;
-  }
-
-  .founder-leadership p strong {
-    color: var(--cream);
-    font-weight: 400;
-  }
-
-  .founder-leadership-sig {
-    margin-top: 36px;
-    padding-top: 24px;
-    border-top: 0.5px solid rgba(201, 169, 97, 0.2);
-  }
-
-  .founder-leadership-sig-name {
-    font-family: var(--serif);
-    font-size: 20px;
-    color: var(--cream);
-    margin-bottom: 4px;
-  }
-
-  .founder-leadership-sig-title {
-    font-family: var(--display);
-    font-size: 11px;
-    letter-spacing: 4px;
-    color: var(--gold);
-  }
-
-  /* ===== PARTNERS ===== */
-  .partners {
-    background: var(--navy-deep);
-    text-align: center;
-  }
-
-  .partners-inner { max-width: 760px; margin: 0 auto; }
-
-  .partners p {
-    font-size: 19px;
-    color: var(--cream-muted);
-    margin-bottom: 48px;
-    line-height: 1.8;
-  }
-
-  /* ===== SIGNUP ===== */
-  .signup {
-    background: var(--navy);
-    text-align: center;
-    padding: 160px 48px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .signup-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 900px;
-    height: 900px;
-    background: radial-gradient(circle, rgba(201, 169, 97, 0.08) 0%, transparent 55%);
-    pointer-events: none;
-  }
-
-  .signup-inner {
-    max-width: 600px;
-    margin: 0 auto;
-    position: relative;
-  }
-
-  .signup h2 {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-style: italic;
-    font-size: clamp(32px, 4.5vw, 48px);
-    line-height: 1.3;
-    margin-bottom: 24px;
-  }
-
-  .signup p {
-    color: var(--cream-muted);
-    margin-bottom: 40px;
-    font-size: 18px;
-  }
-
-  .signup-form {
-    display: flex;
-    gap: 0;
-    max-width: 480px;
-    margin: 0 auto;
-    border-bottom: 0.5px solid var(--gold);
-  }
-
-  .signup-form input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    padding: 16px 4px;
-    font-family: var(--serif);
-    font-size: 18px;
-    color: var(--cream);
-    outline: none;
-  }
-
-  .signup-form input::placeholder {
-    color: var(--cream-faint);
-    font-style: italic;
-  }
-
-  .signup-form button {
-    background: transparent;
-    border: none;
-    color: var(--gold);
-    font-family: var(--display);
-    font-size: 11px;
-    letter-spacing: 3px;
-    padding: 16px 8px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-
-  .signup-form button:hover { color: var(--gold-warm); }
-
-  .signup-note {
-    font-size: 13px;
-    color: var(--cream-faint);
-    margin-top: 20px;
-    font-style: italic;
-  }
-
-  .signup-success {
-    display: none;
-    color: var(--gold);
-    font-style: italic;
-    font-size: 18px;
-    margin-top: 20px;
-  }
-
-  /* ===== FOOTER ===== */
-  footer {
-    background: var(--navy-deep);
-    padding: 60px 48px 40px;
-    border-top: 0.5px solid rgba(201, 169, 97, 0.15);
-  }
-
-  .footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 24px;
-  }
-
-  .footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .footer-mark {
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-  }
-
-  .footer-text {
-    font-family: var(--display);
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: var(--cream);
-  }
-
-  .footer-text .lux { color: var(--gold); }
-
-  .footer-links {
-    display: flex;
-    gap: 32px;
-    font-family: var(--sans);
-    font-size: 12px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  .footer-links a {
-    color: var(--cream-muted);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .footer-links a:hover { color: var(--gold); }
-
-  .footer-copy {
-    width: 100%;
-    text-align: center;
-    margin-top: 40px;
-    font-size: 12px;
-    color: var(--cream-faint);
-    font-style: italic;
-  }
-
-  /* ===== SCROLL REVEAL ===== */
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
-  }
-
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* ===== MOBILE ===== */
-  @media (max-width: 768px) {
-    nav { padding: 14px 20px; }
-    .nav-links { display: none; }
-    .nav-tagline { display: none; }
-    .nav-mark { width: 40px; height: 40px; }
-    section { padding: 80px 24px; }
-    .hero { padding: 100px 24px 100px; }
-    .hero-mark { width: 140px; height: 140px; }
-    .scroll-cue { display: none; }
-    .memorigems-grid { grid-template-columns: 1fr; gap: 48px; }
-    .memorigems-screens { gap: 14px; }
-    .memorigems-screen-caption { font-size: 14px; }
-    .how-it-works-grid { grid-template-columns: 1fr; gap: 40px; }
-    .founder-leadership-grid {
-      grid-template-columns: 1fr;
-      gap: 48px;
-    }
-    .founder-leadership-portrait {
-      max-width: 320px;
-      margin: 0 auto;
-    }
-    .signup { padding: 100px 24px; }
-    footer { padding: 40px 24px 24px; }
-    .footer-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
-    .signup-form { flex-direction: column; gap: 16px; border-bottom: none; }
-    .signup-form input { border-bottom: 0.5px solid var(--gold); text-align: center; }
-    .signup-form button { border: 0.5px solid var(--gold); padding: 14px; }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Organization","name":"HuLux Innovations",
+  "url":"https://huluxinnovations.com/","logo":"https://huluxinnovations.com/assets/hulux-mark.jpg",
+  "description":"An organization advancing human-centered communication through research, technology, and education. Creator of the VOCES framework and MemoriGems.",
+  "founder":{"@type":"Person","name":"Lisette Diaz Santiago","jobTitle":"Founder & CEO"},
+  "sameAs":["https://www.linkedin.com/company/huluxinnovations"]
+}
+</script>
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <div class="nav-brand">
-    <img src="/assets/hulux-mark.jpg" alt="HuLux Innovations" class="nav-mark">
-    <div class="nav-divider"></div>
-    <div>
-      <div class="nav-text">HU<span class="lux">LUX</span> INNOVATIONS</div>
-      <div class="nav-tagline">Closer, when it matters most</div>
-    </div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/hulux-mark.jpg" alt="HuLux Innovations mark" onerror="this.outerHTML='<span class=&quot;bmark&quot;>H</span>'">
+      <span class="btext">Hu<b>Lux</b> Innovations</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#voces">VOCES®</a>
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="memorigems.html">MemoriGems®</a>
+      <a href="about.html">About</a>
+      <a href="#research">Research</a>
+      <a class="btn btn-primary" href="#contact">Partner with us</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
-  <div class="nav-links">
-    <a href="#mission">Mission</a>
-    <a href="#beliefs">Beliefs</a>
-    <a href="#memorigems">MemoriGems</a>
-    <a href="#leadership">Leadership</a>
-    <a href="#partners">Partners</a>
-    <a href="#signup" class="nav-cta">Stay Close</a>
-  </div>
+</header>
+<nav class="mobile-menu">
+  <a href="#voces">VOCES®</a>
+  <a href="#ecosystem">Ecosystem</a>
+  <a href="memorigems.html">MemoriGems®</a>
+  <a href="about.html">About</a>
+  <a href="#research">Research</a>
+  <a class="btn btn-primary" href="#contact">Partner with us</a>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="top">
-  <div class="hero-glow"></div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">HULUX INNOVATIONS</div>
-    <img src="/assets/hulux-mark.jpg" alt="HuLux Innovations" class="hero-mark">
-    <h1>Closer, when it <em>matters most</em>.</h1>
-    <p class="hero-sub">We build human-centered technology that preserves connection, dignity, and emotional wellbeing — across generations, and through life's most vulnerable moments.</p>
-    <div class="hero-cta-row">
-      <a href="#memorigems" class="btn btn-primary">Discover MemoriGems</a>
-      <a href="#signup" class="btn btn-ghost">Join Our Journey</a>
-    </div>
-  </div>
-  <div class="scroll-cue">SCROLL</div>
-</section>
-
-<!-- MISSION -->
-<section class="mission" id="mission">
-  <div class="mission-inner reveal">
-    <div class="section-eyebrow">OUR MISSION</div>
-    <div class="section-divider"></div>
-    <p class="mission-quote">"To create technology and experiences that help people hold onto what matters most — identity, voice, love, and connection."</p>
-    <p class="mission-body">HuLux Innovations exists to reimagine how technology supports humanity — not by replacing care, but by deepening it. Our work sits at the intersection of healthcare, memory, caregiving, and emotional design.</p>
-  </div>
-</section>
-
-<!-- BELIEFS -->
-<section class="beliefs" id="beliefs">
-  <div class="beliefs-header reveal">
-    <div class="section-eyebrow">WHAT WE BELIEVE</div>
-    <h2 class="section-title">Six truths that <em>shape our work</em>.</h2>
-    <div class="section-divider"></div>
-  </div>
-  <div class="beliefs-grid">
-    <div class="belief reveal">
-      <div class="belief-num">01</div>
-      <div class="belief-text">Dignity is not optional.</div>
-      <div class="belief-sub">Especially not at the end.</div>
-    </div>
-    <div class="belief reveal">
-      <div class="belief-num">02</div>
-      <div class="belief-text">Caregivers deserve care, too.</div>
-    </div>
-    <div class="belief reveal">
-      <div class="belief-num">03</div>
-      <div class="belief-text">Memory may fade. Connection doesn't have to.</div>
-    </div>
-    <div class="belief reveal">
-      <div class="belief-num">04</div>
-      <div class="belief-text">Voice carries what text cannot.</div>
-    </div>
-    <div class="belief reveal">
-      <div class="belief-num">05</div>
-      <div class="belief-text">Aging is a season to honor, not a problem to fix.</div>
-    </div>
-    <div class="belief reveal">
-      <div class="belief-num">06</div>
-      <div class="belief-text">Technology should deepen humanity, not replace it.</div>
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow reveal">Human-Centered Communication</span>
+    <h1 class="reveal">Closer, when it <em>matters most.</em></h1>
+    <p class="lead reveal">HuLux Innovations advances human-centered communication — so connection survives what memory, illness, and time take from us.</p>
+    <div class="pillars3 reveal">Human Connection <span>·</span> Intelligent Communication <span>·</span> Lasting Impact</div>
+    <div class="cta-row reveal">
+      <a class="btn btn-primary" href="#voces">Explore VOCES®</a>
+      <a class="btn btn-ghost" href="memorigems.html">Meet MemoriGems®</a>
     </div>
   </div>
 </section>
 
-<!-- FOCUS AREAS -->
-<section class="focus">
-  <div class="focus-header reveal">
-    <div class="section-eyebrow">WHERE WE FOCUS</div>
-    <h2 class="section-title">Designed for life's <em>most tender</em> moments.</h2>
-    <div class="section-divider"></div>
-  </div>
-  <div class="focus-list reveal">
-    <div class="focus-tag">Dementia &amp; cognitive support</div>
-    <div class="focus-tag">Caregiver wellbeing</div>
-    <div class="focus-tag">Voice &amp; storytelling</div>
-    <div class="focus-tag">Human-centered communication</div>
-    <div class="focus-tag">Intergenerational connection</div>
-    <div class="focus-tag">Dignity-centered innovation</div>
+<!-- BELIEF -->
+<section class="belief">
+  <div class="wrap">
+    <span class="eyebrow reveal">What We Believe</span>
+    <p class="reveal">Communication should adapt to <span>people</span> — not the other way around.</p>
   </div>
 </section>
 
-<!-- MEMORIGEMS -->
-<section class="memorigems" id="memorigems">
-  <div class="memorigems-glow"></div>
-  <div class="memorigems-grid">
-    <div class="reveal">
-      <div class="memorigems-tag">OUR FLAGSHIP</div>
-      <h2><a href="https://www.mymemorigems.com/" target="_blank" rel="noopener">MemoriGems<em>.</em></a></h2>
-      <p>A voice-first memory and connection platform designed to help families preserve meaningful moments through photos, voice recordings, stories, and sensory-based experiences.</p>
-      <div class="memorigems-quote">"While memory may fade, emotional recognition and connection can still remain."</div>
-      <p>Built for the people walking through cognitive decline — and for the families who love them. So identity, voice, and love can outlast even what's been forgotten.</p>
-      <div style="margin-top: 32px;">
-        <a href="https://www.mymemorigems.com/" target="_blank" rel="noopener" class="btn btn-primary">Visit MemoriGems</a>
-      </div>
-    </div>
-    <div class="reveal">
-      <div class="memorigems-screens">
-        <div class="memorigems-screen">
-          <img src="/lavenderRoutine.jpg" alt="MemoriGems Routine prompts screen — gentle reminders for daily moments">
-          <div class="memorigems-screen-label">ROUTINE</div>
-          <div class="memorigems-screen-caption">For the rhythms of the day — meals, dressing, rest. Familiar voices guiding familiar moments.</div>
-        </div>
-        <div class="memorigems-screen">
-          <img src="/mintComfort.jpg" alt="MemoriGems Comfort prompts screen — phrases to help a loved one feel safe and settled">
-          <div class="memorigems-screen-label">COMFORT</div>
-          <div class="memorigems-screen-caption">Reassurance, recorded in advance. So safety is never further than a familiar voice.</div>
+<!-- WHY HULUX -->
+<section class="why">
+  <div class="wrap">
+    <div class="grid">
+      <div class="reveal">
+        <span class="eyebrow">Why HuLux?</span>
+        <h2>Human + Light.</h2>
+        <div class="humanlight">
+          <div class="hl"><div class="w">Human</div><div class="m">our center</div></div>
+          <div class="hl"><div class="w">Light</div><div class="m">our purpose</div></div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="how-it-works">
-  <div class="how-it-works-header reveal">
-    <div class="section-eyebrow">HOW MEMORIGEMS WORKS</div>
-    <h2 class="section-title">Three steps to keep <em>a voice close</em>.</h2>
-    <div class="section-divider"></div>
-  </div>
-  <div class="how-it-works-grid">
-    <div class="how-step reveal">
-      <div class="how-step-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="9" y="2" width="6" height="13" rx="3"/>
-          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-          <line x1="12" y1="19" x2="12" y2="22"/>
-        </svg>
-      </div>
-      <div class="how-step-num">01</div>
-      <div class="how-step-title">Record</div>
-      <div class="how-step-desc">Family members record gentle phrases in their own voice — guided by suggested prompts for routine moments or comfort.</div>
-    </div>
-    <div class="how-step reveal">
-      <div class="how-step-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 3h12l4 6-10 13L2 9z"/>
-          <path d="M12 22 8 9l4-6 4 6z"/>
-          <path d="M2 9h20"/>
-        </svg>
-      </div>
-      <div class="how-step-num">02</div>
-      <div class="how-step-title">Save as a Gem</div>
-      <div class="how-step-desc">Each recording becomes a Gem, organized by category and tagged to the moments and needs it belongs to.</div>
-    </div>
-    <div class="how-step reveal">
-      <div class="how-step-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-        </svg>
-      </div>
-      <div class="how-step-num">03</div>
-      <div class="how-step-title">Reconnect</div>
-      <div class="how-step-desc">They hear the voice they know — in the moments they need it most. Because emotional recognition can outlast memory.</div>
-    </div>
-  </div>
-</section>
-
-<!-- FOUNDER / LEADERSHIP -->
-<section class="founder-leadership" id="leadership">
-  <div class="founder-leadership-glow"></div>
-  <div class="founder-leadership-grid">
-    <div class="founder-leadership-portrait reveal">
-      <img src="/lisette-headshot.jpg" alt="Lisette Diaz Santiago, Founder &amp; CEO of HuLux Innovations">
-    </div>
-    <div class="reveal">
-      <div class="founder-leadership-tag">LEADERSHIP</div>
-      <h2>Built by someone who has <em>been in the room</em>.</h2>
-      <p>HuLux Innovations was founded by <strong>Lisette Diaz Santiago</strong>, a healthcare leader, educator, and program builder with over a decade of experience inside one of the country's largest safety-net health systems.</p>
-      <p>At Boston Medical Center, Lisette's career moved through the work itself — from coordinating a high-acuity Surgical ICU, to managing project operations in Trauma &amp; Acute Care Surgery, to leading patient experience initiatives that improved HCAHPS scores and built unit-level champion programs, to ultimately designing and running system-wide training as Learning &amp; Development Manager. As part of a team rebuilding new-hire onboarding, she created the orientation curriculum used across sessions and personally facilitated more than a dozen cohorts — work that helped achieve a <strong>98% satisfaction rate</strong> and strengthened early engagement across a diverse frontline workforce.</p>
-      <p>In 2025, she lost her grandfather to progressive dementia. What she learned in those final months — about the moments families search for, the technology they couldn't find, and the parts of a person that remain even when memory recedes — became the foundation for HuLux Innovations, formally established in November 2025, and its flagship product, MemoriGems.</p>
-      <p>In summer 2026, Lisette will present at the <strong>Alzheimer's Association International Conference (AAIC)</strong> on voice-based approaches to supporting emotional connection in dementia care — work drawn directly from MemoriGems' early thinking.</p>
-      <p>HuLux Innovations exists because she could not find what her family needed — and because she believes other families deserve better than to search alone.</p>
-      <div class="founder-leadership-sig">
-        <div class="founder-leadership-sig-name">Lisette Diaz Santiago</div>
-        <div class="founder-leadership-sig-title">FOUNDER &amp; CEO</div>
+      <div class="reveal">
+        <p>People often ask why we chose the name HuLux. It joins two words — <b>Human</b> and <b>Light</b> — and a single conviction: that every person deserves to be seen through their humanity, not their diagnosis, age, language, or circumstance.</p>
+        <p>Too often, people are asked to adapt to systems never designed for them — in healthcare, caregiving, aging, and everyday communication. HuLux exists to reverse that. We build systems that adapt to the person.</p>
+        <p>That conviction became <b>VOCES®</b>, our human-centered communication framework — and from VOCES came <b>MemoriGems®</b>, our first flagship. MemoriGems is the beginning, not the whole.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PARTNERS / INVESTORS -->
-<section class="partners" id="partners">
-  <div class="partners-inner reveal">
-    <div class="section-eyebrow">FOR PARTNERS &amp; INVESTORS</div>
-    <h2 class="section-title">Building the <em>future of care</em>, together.</h2>
-    <div class="section-divider"></div>
-    <p>We're partnering with healthcare systems, memory care communities, family-care platforms, and mission-aligned investors who believe technology should deepen humanity. If our work speaks to yours, we'd love to talk.</p>
-    <a href="mailto:hello@huluxinnovations.com" class="btn btn-primary">Get In Touch</a>
+<!-- VOCES -->
+<section class="voces" id="voces">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <span class="eyebrow reveal">Our Core Intellectual Property</span>
+        <h2 class="reveal">VOCES<sup>®</sup></h2>
+        <p class="sub reveal">The communication framework.</p>
+        <p class="mean reveal"><b>Voces</b> — the Spanish word for <i>voices</i> — and an acronym:<br><b>V</b>oz <b>O</b>rientada a la <b>C</b>ontinuidad, <b>E</b>moción y <b>S</b>ostén.</p>
+        <p class="body reveal">A human-centered framework that adapts communication to the whole person — honoring their cognitive, sensory, emotional, linguistic, cultural, and educational needs.</p>
+        <p class="tag reveal">One framework. Many applications.</p>
+      </div>
+      <div class="pillars reveal">
+        <div class="pillar"><div class="es">Voz</div><div class="en">Relational Voice</div><p>Familiar relational voice serves as the primary emotional cue.</p></div>
+        <div class="pillar"><div class="es">Continuidad</div><div class="en">Identity Continuity</div><p>Reinforces identity, relationships, roles, and personal narrative.</p></div>
+        <div class="pillar"><div class="es">Emoción</div><div class="en">Emotional Pathways</div><p>Engages emotionally preserved pathways to support recognition.</p></div>
+        <div class="pillar"><div class="es">Sostén</div><div class="en">Support Through Ritual</div><p>Creates repeatable, meaningful rituals that sustain connection.</p></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- SIGNUP -->
-<section class="signup" id="signup">
-  <div class="signup-glow"></div>
-  <div class="signup-inner reveal">
-    <div class="section-eyebrow">STAY CLOSE</div>
-    <h2>Join us as we build what comes next.</h2>
-    <p>For early access to MemoriGems, founder updates, and reflections on dignity-centered design.</p>
-    <form class="signup-form" id="emailForm" action="https://formspree.io/f/xojbnqdn" method="POST" onsubmit="handleSubmit(event)">
-      <input type="email" name="email" placeholder="Your email address" required id="emailInput">
-      <input type="hidden" name="_subject" value="New HuLux Innovations signup">
-      <button type="submit">SUBSCRIBE →</button>
-    </form>
-    <div class="signup-success" id="successMsg">Thank you. We'll be in touch.</div>
-    <p class="signup-note">We send rarely. We won't share your address.</p>
+<!-- ECOSYSTEM -->
+<section class="eco" id="ecosystem">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow reveal">The HuLux Ecosystem</span>
+      <h2 class="reveal">One framework, expressed five ways.</h2>
+      <p class="mission reveal">Our mission: to create human-centered communication frameworks, tools, and training that preserve connection, dignity, and understanding across the human journey.</p>
+    </div>
+    <div class="flow">
+      <div class="node org reveal"><span class="kicker">The Organization</span><span class="name">HuLux Innovations</span></div>
+      <div class="connector reveal"></div>
+      <div class="node framework reveal">
+        <span class="kicker">Core Framework · The Communication Framework</span>
+        <span class="name">VOCES<sup>®</sup></span>
+        <p class="desc">The intellectual property every pillar is built to express. <i>One framework. Many applications.</i></p>
+      </div>
+      <div class="connector reveal"></div>
+      <div class="branch-label reveal">How VOCES becomes real · five pillars</div>
+      <div class="pillars5 reveal">
+        <div class="pcard"><div class="diamond"></div><h3>Products &amp; Technology</h3><p>Tools that bring the framework to life.</p><div class="flag"><b>MemoriGems®</b> — flagship platform</div></div>
+        <div class="pcard"><div class="diamond"></div><h3>Training &amp; Education</h3><p>Building knowledge, skills, and confidence.</p></div>
+        <div class="pcard"><div class="diamond"></div><h3>Certification &amp; Credentialing</h3><p>Recognizing excellence in human-centered communication.</p></div>
+        <div class="pcard"><div class="diamond"></div><h3>Research &amp; Evidence</h3><p>Advancing the science and proving the impact.</p></div>
+        <div class="pcard"><div class="diamond"></div><h3>Implementation &amp; Partnerships</h3><p>Bringing VOCES to organizations and communities.</p></div>
+      </div>
+      <div class="connector reveal"></div>
+      <div class="serve reveal">
+        <div class="branch-label">Who we serve</div>
+        <div class="serve-row">
+          <div class="chip">People Living with Dementia</div>
+          <div class="chip">Families &amp; Caregivers</div>
+          <div class="chip">Healthcare Professionals</div>
+          <div class="chip">Healthcare &amp; Memory Care Orgs</div>
+          <div class="chip">Educators &amp; Students</div>
+          <div class="chip">Communities &amp; Society</div>
+        </div>
+      </div>
+      <div class="eco-foot reveal">One framework. Many solutions. Infinite possibilities.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FLAGSHIP -->
+<section class="flagship">
+  <div class="wrap">
+    <div class="grid">
+      <div class="reveal">
+        <span class="eyebrow">First Flagship Innovation</span>
+        <h2>MemoriGems<sup style="font-size:.4em;color:var(--gold)">®</sup></h2>
+        <p class="tagline">Because connection is more than memory.</p>
+        <p>The first practical application of VOCES — a voice-first platform that pairs familiar voices with meaningful images to prioritize emotional recognition over memory performance, preserving connection and dignity for people living with dementia and the families who love them.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="memorigems.html">Explore MemoriGems®</a></div>
+      </div>
+      <figure class="imgframe reveal">
+        <img src="mintComfort.jpg" alt="A family sharing a meaningful moment with MemoriGems" onerror="this.style.display='none'">
+        <figcaption>Familiar voices, meaningful images — connection that doesn't depend on recall.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="research" id="research">
+  <div class="wrap">
+    <span class="eyebrow reveal">Research &amp; Evidence</span>
+    <h2 class="reveal">Research before marketing. Humanity before technology.</h2>
+    <p class="note reveal">Every framework, technology, and partnership at HuLux is grounded in evidence-informed principles drawn from emotional-memory and auditory-processing research.</p>
+    <div class="r-grid">
+      <div class="r-card reveal"><h3>Evidence-Informed Design</h3><p>Built on research showing that emotional processing and familiar auditory pathways may remain meaningful even as memory changes.</p></div>
+      <div class="r-card reveal"><h3>Outcome Measurement</h3><p>Studying emotional engagement and connection outcomes through caregiver experience and structured feedback.</p></div>
+      <div class="r-card reveal"><h3>Academic Partnerships</h3><p>Collaborating with clinicians, researchers, and universities to advance the science and prove the impact.</p></div>
+    </div>
+    <p class="honesty reveal">Our work is informed by — not yet validated by — the research it draws upon. MemoriGems has not yet been studied in clinical trials.</p>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners">
+  <div class="wrap">
+    <span class="eyebrow reveal">For Partners &amp; Investors</span>
+    <h2 class="reveal">A growing body of intellectual property dedicated to meeting people where they are.</h2>
+    <div class="p-grid">
+      <div class="p-card reveal"><h3>A framework, not a feature</h3><p>VOCES is licensable, research-backed intellectual property with applications across healthcare, education, and accessibility.</p></div>
+      <div class="p-card reveal"><h3>A platform, not a product</h3><p>MemoriGems is the first of many innovations the framework can produce — built to scale across cognitive conditions and care settings.</p></div>
+      <div class="p-card reveal"><h3>Grounded in the room</h3><p>Founded by someone shaped by lived experience, healthcare operations, patient experience, education, and research.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow reveal">Let's Build What Comes Next</span>
+    <h2 class="reveal">Partner with us on research, pilots, and what's possible.</h2>
+    <p class="reveal">We welcome collaboration with clinicians, researchers, care organizations, universities, and partners who believe communication should adapt to people.</p>
+    <div class="cta-row reveal" style="justify-content:center">
+      <a class="btn btn-primary" href="mailto:hello@huluxinnovations.com">Get in touch</a>
+      <a class="btn btn-ghost" href="memorigems.html">See pilot opportunities</a>
+    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="/assets/hulux-mark.jpg" alt="HuLux Innovations" class="footer-mark">
-      <div class="footer-text">HU<span class="lux">LUX</span> INNOVATIONS</div>
+<footer class="footer">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="index.html"><span class="bmark">H</span><span class="btext">Hu<b>Lux</b> Innovations</span></a>
+        <p class="tagline">Human Connection. Intelligent Communication. Lasting Impact.</p>
+      </div>
+      <div class="cols">
+        <div class="col"><h4>Explore</h4><a href="#voces">VOCES®</a><a href="#ecosystem">Ecosystem</a><a href="memorigems.html">MemoriGems®</a><a href="#research">Research</a></div>
+        <div class="col"><h4>Organization</h4><a href="about.html">About</a><a href="about.html#mission">Mission</a><a href="about.html#leadership">Leadership</a><a href="#contact">Contact</a></div>
+        <div class="col"><h4>Connect</h4><a href="mailto:hello@huluxinnovations.com">Email</a><a href="https://www.linkedin.com/company/huluxinnovations">LinkedIn</a></div>
+      </div>
     </div>
-    <div class="footer-links">
-      <a href="#mission">Mission</a>
-      <a href="#beliefs">Beliefs</a>
-      <a href="https://www.mymemorigems.com/" target="_blank" rel="noopener">MemoriGems</a>
-      <a href="#leadership">Leadership</a>
-      <a href="https://www.linkedin.com/company/huluxinnovations" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:hello@huluxinnovations.com">Contact</a>
+    <div class="bottom">
+      <span>© 2026 HuLux Innovations, LLC. All rights reserved.</span>
+      <span>VOCES® and MemoriGems® are trademarks of HuLux Innovations, LLC.</span>
     </div>
-    <div class="footer-copy">© 2026 HuLux Innovations. Closer, when it matters most.</div>
   </div>
 </footer>
 
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    const form = document.getElementById('emailForm');
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        form.style.display = 'none';
-        document.getElementById('successMsg').style.display = 'block';
-      } else {
-        response.json().then(data => {
-          alert(data.error || 'Something went wrong. Please try again or email hello@huluxinnovations.com.');
-        });
-      }
-    }).catch(() => {
-      alert('Something went wrong. Please try again or email hello@huluxinnovations.com.');
-    });
-  }
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
