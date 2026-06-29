@@ -25,7 +25,7 @@
       <a href="index.html#ecosystem">Ecosystem</a>
       <a href="memorigems.html">MemoriGems®</a>
       <a href="about.html">About</a>
-      <a class="btn btn-primary" href="index.html#contact">Partner with us</a>
+      <a class="btn btn-primary" href="#contact">Partner with us</a>
     </nav>
     <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
@@ -35,7 +35,7 @@
   <a href="index.html#ecosystem">Ecosystem</a>
   <a href="memorigems.html">MemoriGems®</a>
   <a href="about.html">About</a>
-  <a class="btn btn-primary" href="index.html#contact">Partner with us</a>
+  <a class="btn btn-primary" href="#contact">Partner with us</a>
 </nav>
 
 <!-- PAGE HERO -->
@@ -139,16 +139,58 @@
 </section>
 
 <!-- CONTACT -->
-<section class="contact">
+<section class="contact" id="contact">
   <div class="wrap">
     <span class="eyebrow reveal">Let's Build What Comes Next</span>
     <h2 class="reveal">Partner with us on research, pilots, and what's possible.</h2>
     <p class="reveal">We welcome collaboration with clinicians, researchers, care organizations, universities, and mission-aligned partners.</p>
-    <div class="cta-row reveal" style="justify-content:center">
-      <a class="btn btn-primary" href="memorigems.html#pilots">Partner with us</a>
+    <form class="intake reveal" action="https://formspree.io/f/xdardwky" method="POST">
+      <input type="hidden" name="_subject" value="New partner / pilot inquiry — HuLux Innovations">
+      <div class="row2">
+        <div class="field"><label for="f-name">Name <span class="req">*</span></label><input id="f-name" name="name" type="text" required placeholder="Your full name"></div>
+        <div class="field"><label for="f-email">Email <span class="req">*</span></label><input id="f-email" name="email" type="email" required placeholder="you@organization.org"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="f-org">Organization</label><input id="f-org" name="organization" type="text" placeholder="Clinic, community, university, or family"></div>
+        <div class="field"><label for="f-role">Role / title</label><input id="f-role" name="role" type="text" placeholder="e.g. Care director, researcher, caregiver"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="f-interest">I'm interested in <span class="req">*</span></label>
+          <select id="f-interest" name="interest" required>
+            <option value="" disabled selected>Select one…</option>
+            <option>Piloting MemoriGems®</option>
+            <option>Research collaboration</option>
+            <option>VOCES® partnership or licensing</option>
+            <option>Investment</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-setting">Care setting</label>
+          <select id="f-setting" name="setting">
+            <option value="" disabled selected>Select one…</option>
+            <option>Family or home</option>
+            <option>Healthcare or clinical</option>
+            <option>Memory-care community</option>
+            <option>University or research</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label for="f-msg">Tell us about your work <span class="req">*</span></label><textarea id="f-msg" name="message" required placeholder="The people you serve, what you're hoping to do, and how you'd like to collaborate."></textarea></div>
+      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="actions">
+        <button class="btn btn-primary" type="submit">Send inquiry</button>
+        <span class="alt">Prefer email? <a href="mailto:lisettediazsantiago@huluxinnovations.com?subject=Partner%20%2F%20Pilot%20Inquiry">lisettediazsantiago@huluxinnovations.com</a></span>
+      </div>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+    <div class="intake-done">
+      <h3>Thank you — we've got it.</h3>
+      <p>Your inquiry is on its way to the HuLux team. We read every message personally and will be in touch soon.</p>
+    </div>
+    <div class="cta-row reveal" style="justify-content:center;margin-top:36px">
       <a class="btn btn-ghost" href="index.html#ecosystem">See the ecosystem</a>
     </div>
-    <p class="reveal" style="text-align:center;margin-top:18px;font-size:14px;color:var(--cream-muted)">Prefer email? <a href="mailto:hello@huluxinnovations.com" style="color:var(--gold-warm);text-decoration:none;border-bottom:1px solid var(--line)">hello@huluxinnovations.com</a></p>
   </div>
 </section>
 
@@ -163,7 +205,7 @@
       <div class="cols">
         <div class="col"><h4>Explore</h4><a href="index.html#voces">VOCES®</a><a href="index.html#ecosystem">Ecosystem</a><a href="memorigems.html">MemoriGems®</a><a href="index.html#research">Research</a></div>
         <div class="col"><h4>Organization</h4><a href="about.html#story">Our Story</a><a href="about.html#mission">Mission</a><a href="about.html#leadership">Leadership</a><a href="index.html#contact">Contact</a></div>
-        <div class="col"><h4>Connect</h4><a href="mailto:hello@huluxinnovations.com">Email</a><a href="https://www.linkedin.com/company/hulux-innovations/" target="_blank" rel="noopener">LinkedIn</a></div>
+        <div class="col"><h4>Connect</h4><a href="mailto:lisettediazsantiago@huluxinnovations.com">Email</a><a href="https://www.linkedin.com/company/hulux-innovations/" target="_blank" rel="noopener">LinkedIn</a></div>
       </div>
     </div>
     <div class="bottom">
