@@ -363,3 +363,53 @@ a{color:inherit;text-decoration:none}
   @keyframes recpulse{0%,100%{opacity:.35;box-shadow:0 0 0 0 rgba(201,169,97,.4)}50%{opacity:1;box-shadow:0 0 0 4px rgba(201,169,97,0)}}
 }
 @media(max-width:560px){.gem-grid{grid-template-columns:1fr 1fr}.phrase{font-size:16px;min-height:66px}}
+
+/* ── VOCES Test · the six questions every solution must pass ── */
+.vtest{background:radial-gradient(720px 460px at 50% 0%, rgba(201,169,97,.07), transparent 60%),var(--navy);padding:120px 0}
+.vtest .eyebrow{display:block;text-align:center;margin-bottom:22px}
+.vtest h2{font-family:var(--serif);font-weight:300;font-size:clamp(30px,4.4vw,48px);text-align:center;max-width:24ch;margin:0 auto 16px;line-height:1.15}
+.vtest .intro{text-align:center;color:var(--cream-muted);font-size:15.5px;line-height:1.7;max-width:60ch;margin:0 auto 56px}
+.vtest .intro b{font-family:var(--display);font-weight:500;letter-spacing:.03em;color:var(--gold-warm)}
+.vtest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.vtest-card{border:1px solid var(--line);border-radius:5px;padding:30px 26px;background:rgba(20,40,73,.3);display:flex;flex-direction:column;gap:12px}
+.vtest-card .q{font-family:var(--display);font-size:11px;font-weight:500;letter-spacing:.2em;color:var(--gold)}
+.vtest-card h3{font-family:var(--serif);font-weight:400;font-size:23px;line-height:1.25;color:var(--cream)}
+.vtest-card p{font-size:13.5px;color:var(--cream-muted);margin:0;line-height:1.6}
+.vtest-foot{text-align:center;margin-top:54px;font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.6vw,26px);color:var(--gold-warm)}
+
+/* ── Long-Term Vision · where VOCES goes next ──────────────── */
+.vision{background:var(--navy);padding:120px 0}
+.vision .eyebrow{display:block;text-align:center;margin-bottom:22px}
+.vision h2{font-family:var(--serif);font-weight:300;font-size:clamp(30px,4.4vw,48px);text-align:center;max-width:24ch;margin:0 auto 16px;line-height:1.15}
+.vision .intro{text-align:center;color:var(--cream-muted);font-size:15.5px;line-height:1.7;max-width:64ch;margin:0 auto 56px}
+.vision-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.vision-card{border:1px solid var(--line);border-radius:5px;padding:24px 22px;background:rgba(20,40,73,.3);display:flex;flex-direction:column;gap:10px}
+.vision-card .diamond{width:9px;height:9px;background:var(--gold);transform:rotate(45deg)}
+.vision-card h3{font-family:var(--display);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-warm);line-height:1.4;margin:0}
+.vision-card p{font-size:13px;color:var(--cream-muted);margin:0;line-height:1.55}
+.vision-foot{max-width:32ch;text-align:center;margin:54px auto 0;font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.6vw,26px);color:var(--gold-warm);line-height:1.3}
+
+@media(max-width:900px){
+  .vtest-grid{grid-template-columns:1fr 1fr}
+  .vision-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .vtest-grid,.vision-grid{grid-template-columns:1fr}
+}
+
+/* ── Unified reach · where VOCES goes (today → horizon) ─────── */
+.reach{width:100%;margin-top:8px;display:flex;flex-direction:column;gap:34px}
+.reach > .branch-label{margin:0 0 4px}
+.reach-band .branch-label{margin:0 0 16px}
+.reach-active{border:1px solid var(--gold);border-radius:6px;background:linear-gradient(180deg,rgba(201,169,97,.12),rgba(20,40,73,.4));padding:24px 26px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.reach-active .ra-name{font-family:var(--display);font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-warm)}
+.reach-active .ra-people{flex:1;min-width:240px;font-size:13px;color:var(--cream-muted);line-height:1.6}
+.reach-active .ra-tag{font-family:var(--display);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--navy-deep);background:var(--gold);border-radius:3px;padding:6px 10px;white-space:nowrap}
+.reach-chips{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+
+/* About · active-today badge on a vision card */
+.vision-card.active{border-color:var(--gold);background:linear-gradient(180deg,rgba(201,169,97,.12),rgba(20,40,73,.3))}
+.vision-card .badge{align-self:flex-start;font-family:var(--display);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--navy-deep);background:var(--gold);border-radius:3px;padding:4px 8px}
+
+@media(max-width:900px){.reach-chips{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.reach-chips{grid-template-columns:1fr}}
