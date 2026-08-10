@@ -614,3 +614,18 @@ a{color:inherit;text-decoration:none}
   .for-card{font-size:18px}
   .format-chip{padding:12px 20px;font-size:11px}
 }
+
+.portfolio{background:var(--navy-deep);padding:110px 0;border-top:1px solid rgba(201,169,97,.14)}
+.portfolio .eyebrow{display:block;margin-bottom:22px}
+.portfolio h2{font-family:var(--serif);font-weight:300;font-size:clamp(28px,4vw,42px);color:var(--cream);max-width:22ch;margin:0 0 18px;line-height:1.16}
+.portfolio .note{font-size:15px;color:var(--cream-faint);line-height:1.75;max-width:66ch;margin:0 0 46px}
+.p-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.p-card{border:1px solid rgba(245,241,232,.13);border-radius:6px;padding:28px 26px;background:rgba(20,40,73,.18)}
+.p-stage{display:inline-block;font-family:var(--display);font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;border-radius:40px;padding:5px 13px;margin-bottom:16px}
+.p-stage.s-early{color:var(--gold-warm);border:1px solid rgba(201,169,97,.42)}
+.p-stage.s-concept{color:#9FB6D4;border:1px solid rgba(159,182,212,.36)}
+.p-card h3{font-family:var(--serif);font-size:24px;color:var(--cream);margin-bottom:10px;font-weight:400}
+.p-card h3 .reg{font-size:12px;vertical-align:super;color:var(--gold-deep);margin-left:1px}
+.p-card p{font-size:14.5px;color:var(--cream-muted);line-height:1.65}
+.p-card .p-bound{font-size:13px;color:var(--cream-faint);font-style:italic;margin-top:12px}
+@media (max-width:900px){.p-grid{grid-template-columns:1fr}.portfolio{padding:80px 0}}
