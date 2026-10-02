@@ -28,8 +28,11 @@
       e.preventDefault();
       const status = form.querySelector('.form-status');
       const btn = form.querySelector('button[type=submit]');
+      const label = btn ? (btn.dataset.label || (btn.dataset.label = btn.textContent)) : '';
+      const errMsg = form.dataset.err || 'Something went wrong. Please try again, or email hello@huluxinnovations.com.';
+      const netMsg = form.dataset.neterr || 'Network error. Please try again, or email hello@huluxinnovations.com.';
       if(status){ status.className='form-status'; status.textContent=''; }
-      if(btn){ btn.disabled=true; btn.textContent='Sending…'; }
+      if(btn){ btn.disabled=true; btn.textContent=form.dataset.sending || 'Sending…'; }
       try{
         const res = await fetch(form.action, {
           method:'POST',
@@ -43,13 +46,13 @@
         } else {
           const data = await res.json().catch(()=>({}));
           const msg = (data.errors && data.errors.map(x=>x.message).join(', '))
-            || 'Something went wrong. Please try again, or email hello@huluxinnovations.com.';
+            || errMsg;
           if(status){ status.className='form-status err'; status.textContent=msg; }
-          if(btn){ btn.disabled=false; btn.textContent='Send inquiry'; }
+          if(btn){ btn.disabled=false; btn.textContent=label; }
         }
       }catch(err){
-        if(status){ status.className='form-status err'; status.textContent='Network error. Please try again, or email hello@huluxinnovations.com.'; }
-        if(btn){ btn.disabled=false; btn.textContent='Send inquiry'; }
+        if(status){ status.className='form-status err'; status.textContent=netMsg; }
+        if(btn){ btn.disabled=false; btn.textContent=label; }
       }
     });
   });
